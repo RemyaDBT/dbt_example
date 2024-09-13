@@ -1,3 +1,9 @@
+{{
+    config(
+        pre_hook = "{{ update_model_time_pre_hook('trail2') }}",
+        post_hook = "{{ update_model_time_post_hook('trail2') }}"
+    )
+}}
 with orders as  (
     select * from {{ ref ('stg_jaffle_shop__orders' )}}
 ),
